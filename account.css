@@ -1,54 +1,413 @@
-*{
-    box-sizing: border-box;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  font-family: AvenirNext,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;
 }
-body{
-    background-color: teal;
-    font-size: 18px;
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
-.main{
-  position: absolute;
+body {
+  line-height: 1.5;
+  position: relative;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* My CSS */
+
+html {
+  background-color: rgb(236, 238, 241);
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/**************** Header **********************/
+
+header {
+  font-family: AvenirNext,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    color: #505050;
+    align-content: center;
+}
+
+#sign-in {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 30px;
+}
+
+#sign-in-nav {
+  display: inherit;
+  flex-direction: column;
   
-   top: 40%;
-   right: 50%;
-   transform: translate(50%, -40%);
-   border: 1px solid gray;
-   padding-left: 10px;
-   padding-right: 10px;
-   background-color: blanchedalmond;
-   border-radius: 8px;
 }
-input::placeholder{
-    font-size: 16px;
+
+#sign-in-btn {
+  float: right;
 }
-h1{
-    text-align: center;
+
+button {
+  background-color: rgb(0,119,197);
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: rgb(76,76,76);
+  color: rgb(255,255,255);
+  height: 32px;
+  padding: 0 20px;
+  font-size: 13.5px;
+  cursor: pointer;
 }
-.paragraph{
-    text-align: center;
+#lock-img {
+  /* background-color: white; */
+  background-image: url(https://plugin.intuitcdn.net/identity-authn-core-ui/1.6.5/images/icon-whitelock@3x.png);
+  height: 1em;
+  width: .8em;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 2px;
+  margin-right: 4px;
+  background-size: contain;
 }
-form{
-    margin-left: 10px;
-    margin-right: 10px ;
-    margin-bottom: 15px;
+
+#sign-in-btn {
+  margin-left: 10px;
 }
-.details{
-    display: flex;
-    flex-direction: column;
-    padding-top: 10px;
+
+a {
+  text-decoration: none;
 }
-input{
-    padding: 5px;
-    border: solid grey 0.5px;
+
+a:focus {
+  outline: dotted thin;
 }
-.button{
-    padding-top: 10px;
+
+a:visited {
+  color: #0077C5;
+  
 }
-.button input{
-    width: 100%;
-    background-color: skyblue;
-    color: white;
-    font-size: 20px;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 0 2px black;
+
+li a {
+  color: #505050;
+  width: 23px;
+  height: 23px;
+  margin-right: 4px;
+}
+
+li a:visited {
+  color: #505050;
+}
+
+#intuit-name-link {
+  display: block;
+  background-image: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/ecosystem_logos_new-a1ca21cc.png);
+  height: 35px;
+  width: 118px;
+  margin: 20px auto;
+}
+
+.fadein {
+  animation: fadein 2s ease-in forwards;
+  animation-delay: 0s;
+}
+
+@keyframes fadein {
+  0%   { opacity: 0; }
+  50%  {opacity: 0;}
+  100% { opacity: 1; }
+}
+
+#footer-items > li > a:hover {
+  text-decoration: underline;
+}
+
+.product {
+  text-transform: lowercase;
+  font-size: 18px;
+  font-weight: 100;
+  position: relative;
+}
+
+#product-listing {
+  margin-bottom: 15px;
+}
+
+#product-listing li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icon {
+  width: 23px;
+  height: 23px;
+  margin-right: 4px;
+  position: relative;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+#mint-icon {
+  background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/mint-favicon-4accf8f4.svg) no-repeat;
+}
+
+#quickbooks-icon {
+  background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/quickbooks-favicon@2x-c89488e8.svg) no-repeat;
+}
+
+#turbotax-icon {
+  background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/tt-favicon@2x-fbd64ab8.svg) no-repeat;
+}
+
+.left-first {
+  position: relative;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.7, 0, 0, 1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-name: left-first-anim;
+}
+
+@keyframes left-first-anim {
+  0%    { left: 142px;
+          transform: scale(1)}
+  25%   { transform: scale(2)}
+  50%   { left: 142px;
+          transform: scale(1);
+           }
+  100%  { left: 0; }
+
+}
+
+.left-after {
+  animation-duration: 2.15s;
+  animation-timing-function: cubic-bezier(0.7, 0, 0, 1);
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-name: left-after-anim;
+}
+
+@keyframes left-after-anim {
+  0%    { 
+          opacity: 0}
+  50%   { left: 50px;
+          opacity: 0}
+  100%   { left: 0;
+           opacity: 100%;
+           }
+}
+
+/*********************** Form ************************/
+form {
+  background-color: white;
+  margin: 0 auto;
+}
+
+fieldset {
+  display: flex;
+  font-family: AvenirNext,Avenir,Helvetica Neue,Helvetica,Arial,sans-serif;
+  padding: 30px;
+  padding-bottom: 33px;
+}
+
+#sign-up-create-account {
+  font-size: 24px;
+  line-height: 26px;
+}
+
+#sign-up-header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  color: #4c4c4c;
+}
+
+#sign-up-subhed {
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 20px;
+}
+
+label {
+  padding-bottom: 6px;
+  color: #404040;
+  font-size: 14px;
+  text-align: left;
+  display: block;
+  line-height: 25px;
+}
+
+.text-input {
+  width: 320px;
+  height: 34px;
+  padding: 0 6px 0 8px;
+  border-radius: 3px;
+  border: 1px solid #c1c5c8;
+  line-height: 1.3em;
+  font-size: 1.4em;
+
+}
+
+.text-input:focus {
+  outline: 0 none;
+  border: 1px solid rgba(82,168,236,.8);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  outline-offset: -2px;
+}
+
+#email-wrapper {
+  height: auto;
+}
+#phone-info {
+  padding: 5px 0;
+  color: #444;
+  font-size: 10px;
+  text-align: left;
+  height: 30px;
+}
+
+.disp-block {
+  display: block;
+}
+
+.disp-none {
+  display: none;
+}
+
+#password-wrapper {
+  height: 95px;
+  transition: 0.8s;
+}
+
+#password-lock-icon {
+  position: absolute;
+  top: 32px;
+  left: 288px;
+  background: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/lock-left-grey@3x-a1ab5bd1.png) no-repeat 0 50%/21px 21px;
+  width: 33px;
+  height: 30px;
+}
+
+
+#create-account {
+  width: 318px;
+  height: 44px;
+  font-size: 15.75px;
+  padding: 6px 12px;
+  margin-bottom: 42px;
+  border: #0077c5;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.75);
+}
+
+#create-account-lock-img {
+  background-image: url(https://plugin.intuitcdn.net/identity-authn-core-ui/images/icon-whitelock@3x-76f33cec.png);  
+  height: 1em;
+  width: .8em;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-top: 2px;
+  margin-right: 4px;
+  background-size: contain;
+}
+
+#form-footer {
+  background-color: #eceef1;
+  font-size: 10px;
+  color: #8d9096;
+  padding: 19px 16px;
+}
+
+#sign-up-widget {
+  width: 380px;
+  border: 1px rgb(199, 199, 199) solid;
+  margin: auto;
+}
+
+
+#email-arrow {
+  position: absolute;
+  bottom: 34px;
+}
+
+#phone-wrapper {
+  min-height: 115px;
+}
+
+#phone-arrow {
+  position: absolute;
+  bottom: 104px;
+}
+
+#password-arrow {
+  bottom: 34px;
+}
+
+.rel {
+  position: relative;
+}
+
+.visible {
+  visibility: visible;
+}
+
+#create-account-info {
+  color: #757575;
+  font-style: italic;
+  padding: 0 20px;
+  line-height: 19px;
+}
+
+/*********************** Footer **********************/
+
+footer {
+  padding: 20px 0;
+}
+
+#footer-items li {
+  display: inline-block;
+  padding-top: 5px;
+}
+
+#copyright {
+  color: #505050;
 }
